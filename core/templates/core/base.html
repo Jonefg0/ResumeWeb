@@ -8,12 +8,12 @@
 <body>
     <h1> Welcome to my page </h1>
     <ol>
-        <li><a href="/">Portada</a></li>
-        <li><a href="/about-me">Acerca de</a></li>
-        <li><a href="/contact">Contacto</a></li>
-        <li><a href="/portfolio"> Portfolio </a></li>
+        <li><a href="{% url 'home'%}">Portada</a></li>
+        <li><a href="{% url 'about-me'}">Acerca de</a></li>
+        <li><a href="{% url 'contact' %}">Contacto</a></li>
+        <li><a href="{% url 'portfolio' %}"> Portfolio </a></li>
     <ol>
-    {% block content %}
+    {% block content %}    
     {% endblock %}
     
 </body>
