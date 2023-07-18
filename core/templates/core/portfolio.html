@@ -1,6 +1,30 @@
 {% extends 'core/base.html' %}
 
+{% block title %}
+Experiencia
+{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block headers %} 
+    <h1>Experiencia</h1>
+{% endblock %}
+
 {% block content %}
-    <h1> Mis proyectos </h1>
-    <p> Ninguno :c</p>
+    <ul>
+        <li>
+            <h6> Aplicación web de trayectoria academica </h6>
+            <p>Mantención y desarrollo de mejoras plataforma web orientada al analisis de la trayectoria academica de estudiantes de la Universida Austral de Chile</p>
+        </li>
+            <h6> Claustro profesores UACh</h6>
+            <p> Apoyo en presentación de plataforma web a docentes de la Universidad Austral de Chile</p>
+        <li>
+            <h6> Aplicación web de intercambio de experiencias educativas </h6>
+            <p> Mantención y adaptación de plataforma web para proyecto educactivo a cargo de Accion STEM, Universidad Austral de Chile</p>
+        </li>
+        <li>
+            <h6> Escuela de Invierno 2023 Universidad Austral de Chile</h6>
+            <p> Apoyo en actividades y taller de capacitación de niños de adolecentes en programación con bloques de código</p>
+        </li>
+    </ul>
 {% endblock %}

@@ -24,7 +24,7 @@ from core import views as cv #coreviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',cv.home, name="home"),
-    path('about-me',cv.about, name="about me"),
+    path('about-me',cv.about, name="about-me"),
     path('contact', cv.contact, name="contact"),
     path('portfolio', cv.portfolio, name="portfolio")
 ]

@@ -1,6 +1,11 @@
 {% extends 'core/base.html' %}
 
-{% block content %}
-    <h1> Bienvenido</h1>
-    <p> This is working....!!</p>
+{% block title %}
+Portada
+{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+{% block headers %} 
+    <h1>Bienvenido</h1>
 {% endblock %}
