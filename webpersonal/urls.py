@@ -19,7 +19,7 @@ from django.urls import path
 from core import views as cv #coreviews
 
 
-
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,8 @@ urlpatterns = [
     path('contact', cv.contact, name="contact"),
     path('portfolio', cv.portfolio, name="portfolio")
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
