@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Experiencia
+{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block headers %} 
+    <h1>Experiencia</h1>
+{% endblock %}
+
+{% block content %}
+
+{% for project in projects %}
+    <div class= "row project">
+        <div class= "col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" src="{{project.image.url}}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">{{project.title}}</h2>
+        <p>{{project.description}}</p>
+            {% if project.URLField %}
+                <a href={{project.URLField}}> Más información </a>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+        <!--    
+            <li>
+                <h6> Aplicación web de trayectoria academica </h6>
+                <p>Mantención y desarrollo de mejoras plataforma web orientada al analisis de la trayectoria academica de estudiantes de la Universida Austral de Chile</p>
+            </li>
+            <h6> Claustro profesores UACh</h6>
+            <p> Apoyo en presentación de plataforma web a docentes de la Universidad Austral de Chile</p>
+        <li>
+            <h6> Aplicación web de intercambio de experiencias educativas </h6>
+            <p> Mantención y adaptación de plataforma web para proyecto educactivo a cargo de Accion STEM, Universidad Austral de Chile</p>
+        </li>
+        <li>
+            <h6> Escuela de Invierno 2023 Universidad Austral de Chile</h6>
+            <p> Apoyo en actividades y taller de capacitación de niños de adolecentes en programación con bloques de código</p>
+        </li>
+        -->
+{% endblock %}

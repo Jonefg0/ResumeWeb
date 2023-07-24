@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as cv #coreviews
+from portafolio import views as pv #portfolioviews
 
 
 from django.conf import settings
@@ -26,7 +27,7 @@ urlpatterns = [
     path('',cv.home, name="home"),
     path('about-me',cv.about, name="about-me"),
     path('contact', cv.contact, name="contact"),
-    path('portfolio', cv.portfolio, name="portfolio")
+    path('portfolio', pv.portfolio, name="portfolio")
 ]
 
 if settings.DEBUG:

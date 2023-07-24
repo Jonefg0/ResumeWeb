@@ -22,10 +22,6 @@ def about(request):
     return render(request, "core/about-me.html")
 
 
-def portfolio(request):
-    print("accessing to portafolio...")
-    return render(request, "core/portfolio.html")
-                        
 def contact(request):
     print("accessing to contact...")
     return render(request, "core/contact.html")
